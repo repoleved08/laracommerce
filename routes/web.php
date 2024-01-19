@@ -28,6 +28,8 @@ Route::middleware([
 
 Route::get('/redirect', [HomeController::class, 'redirect' ]);
 
+Route::get('/item_detail/{id}', [HomeController::class, 'item_detail' ]);
+
 Route::get('/view_category', [AdminController::class, 'view_category' ]);
 
 Route::post('/add_category', [AdminController::class, 'add_category' ]);
@@ -45,3 +47,11 @@ Route::get('/delete_product/{id}', [AdminController::class,'delete_product'] );
 Route::get('/edit_product/{id}', [AdminController::class,'update_product'] );
 
 Route::post('/change_product/{id}', [AdminController::class, 'change_product' ]);
+
+Route::post('/addto_cart/{id}', [HomeController::class, 'addto_cart' ]);
+
+Route::get('/show_cart', [HomeController::class, 'show_cart' ]);
+
+Route::get('/delete_cart/{id}', [HomeController::class,'delete_cart'] );
+
+Route::get('/payment_option/{totalprice}', [HomeController::class,'payment_option'] );

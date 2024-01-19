@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="home/output.css" rel="stylesheet">
+    {{-- <link href="/home/output.css" rel="stylesheet"> --}}
+    <base href="/public">
+    <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+  
     <title>X10Aibots</title>
 </head>
 
@@ -33,8 +35,13 @@
 
             <div class="flex flex-col items-center justify-center">
                 <button
-                    class=" mt-4 text-white bg-sky-500 ring-2 ring-sky-500 ring-inset rounded-lg sm:w-6/12 lg:w-4/12 px-6 py-4 baselinen transform transition-transform duration-500 hover:scale-110 font-bold">
-                    Get Started <span class="ml-5"><font-awesome-icon :icon="['fas', 'cart-shopping']" /></span>
+                <a href="#_" class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+                    <span class="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+                    <span class="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                    <span class="relative text-white">Get Staarted Today</span>
+                    </span>
+                    </a>
+                    
                 </button>
 
 
@@ -194,7 +201,7 @@
             @include('home.footer')
         </div>
 
-        <script src="home/assets/script.js"></script>
+        {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 
 </body>
 

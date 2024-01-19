@@ -1,10 +1,8 @@
 <nav class="fixed z-10 bg-black bg-opacity-50 transition-colors duration-200 ease-in-out w-full px-12 py-2" >
-    
-</style=>>
     <div class="flex items-center justify-between">
         <!-- Logo -->
         <div class="pt-2">
-            <a href="#" class="text-black">
+            <a href="{{url('/')}}" class="text-black">
                 <img src="home/assets/mockups/ss.png" width="50px" alt="Icon">
             </a>
         </div>
@@ -12,6 +10,7 @@
         <div class="hidden md:flex space-x-2">
             <a href="#" class="p-3 pt-2 text-white font-bold hover:text-darkGrayishBlue">Telegram</a>
             <a href="#" class="p-3 pt-2 text-white font-bold hover:text-darkGrayishBlue">Support</a>
+            <a href="{{url('show_cart')}}" class="p-3 pt-2 text-white font-bold hover:text-darkGrayishBlue">Cart</a>
             <div class="group relative inline-block pt-2">
                 <a href="#" class="pt-2 text-white font-bold hover:text-darkGrayishBlue">Menu
                     <span
@@ -41,6 +40,7 @@
                 @endif
                 @endauth
         @endif
+        
         </div>
         <!-- Hamburger -->
         <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
