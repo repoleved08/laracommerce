@@ -55,3 +55,25 @@ Route::get('/show_cart', [HomeController::class, 'show_cart' ]);
 Route::get('/delete_cart/{id}', [HomeController::class,'delete_cart'] );
 
 Route::get('/payment_option/{totalprice}', [HomeController::class,'payment_option'] );
+
+Route::get('/stripe/{totalprice}', [HomeController::class,'stripe'] );
+
+Route::post('stripe/{totalprice}', [HomeController::class, 'stripePost'])->name('stripe.post');
+
+Route::get('/userorders', [HomeController::class,'userorders'] );
+
+Route::get('/success', [HomeController::class,'success'] );
+
+Route::get('/orders', [AdminController::class,'orders'] );
+
+Route::get('/delivered/{id}', [AdminController::class,'delivered'] );
+
+Route::get('/bot', [AdminController::class,'bot'] );
+
+Route::get('/blogpost', [HomeController::class,'blogpost'] );
+
+Route::post('/add_bot', [AdminController::class,'add_bot'] );
+
+Route::get('/bitcoin/{totalprice}', [App\Http\Controllers\PaymentController::class, 'bitcoin']);
+
+Route::post('/pay/{totalprice}', [App\Http\Controllers\PaymentController::class, 'pay']);

@@ -12,28 +12,7 @@
 
     <!-- sidebars -->
 
-    <!-- notifications sidebar -->
-    <div class="sidebar" id="notifications">
-        <div class="sidebar-header d-block align-items-end">
-            <div class="align-items-center d-flex justify-content-between py-4">
-                Notifications
-                <button data-sidebar-close>
-                    <i class="bi bi-arrow-right"></i>
-                </button>
-            </div>
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link active nav-link-notify" data-bs-toggle="tab" href="#activities">Activities</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#notes">Notes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#alerts">Alerts</a>
-                </li>
-            </ul>
-        </div>
-        @include('admin.sidebar')
+        
         <!-- ./ notifications sidebar -->
 
         <!-- settings sidebar -->

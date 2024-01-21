@@ -17,8 +17,6 @@
     <div class="overflow-x-hidden">
         <!-- Text goes here -->
 
-        <!-- Get Started -->
-
 
         <section class="w-screen pt-40 mb-14 ">
 
@@ -74,7 +72,10 @@
 
     {{-- <script src="home/script.js"></script> --}}
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./node_modules/preline/dist/preline.js"></script>
 
 </body>
 
 </html>
+
+

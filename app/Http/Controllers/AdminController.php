@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\File;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Order;
+use App\Models\Bot;
 
 class AdminController extends Controller
 {
@@ -36,24 +38,44 @@ class AdminController extends Controller
     {
         $product = new Product;
         $product->name = $request->name;
-        $product->description = $request->description;
+        $product->description = strip_tags($request->description);
         $product->price = $request->price;
         $product->discount_price = $request->discount_price;
         $product->category = $request->category;
+        $product->bot = $request->bot;
         $product->quantity = $request->quantity;
 
         $image = $request->image;
         $imagename = time() . '.' . $image->getClientOriginalExtension();
         $request->image->move('products', $imagename);
         $product->image = $imagename;
+
         $product->save();
+        return redirect()->back()->with('message', 'Product Added successuly');
+    }
+
+    public function bot()
+    {
+        return view('admin.bot');
+    }
+
+    public function add_bot(Request $request)
+    {
+        $data = new Bot;
+        $data->name = $request->name;
+        $file = $request->file;
+        $filename = time() . '.' . $file->getClientOriginalExtension();
+        $request->file->move('bots', $filename);
+        $data->file = $filename;
+        $data->save();
         return redirect()->back()->with('message', 'Product Added successuly');
     }
 
     public function view_product()
     {
+        $bot = Bot::all();
         $category = Category::all();
-        return view('admin.product', compact('category'));
+        return view('admin.product', compact('category','bot'));
     }
 
     public function show_product()
@@ -100,4 +122,20 @@ class AdminController extends Controller
         $product->update($request->only('name', 'description', 'price', 'discount_price', 'quantity', 'category'));
         return redirect()->back()->with('message','Products updated successfully!');
     }
+
+    public function orders()
+    {
+        $order = Order::all();
+        return view('admin.orders', compact('order'));
+    }
+
+    public function delivered($id)
+    {
+        $order = Order::find($id);
+        $order->delivery_status = "Processed";
+        $order->save(); 
+        return redirect()->back()->with("message","Approved");
+    }
+
+   
 }

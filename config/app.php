@@ -170,6 +170,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+        Coinremitter\CoinremiterServiceProvider::class,
+        PrevailExcel\Coinremitter\CoinremitterServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -184,7 +186,11 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        // 'Example' => App\Facades\Example::class,
+        
+        'Coinremitter' => PrevailExcel\Coinremitter\Facades\Coinremitter::class,
+        
     ])->toArray(),
+
+   
 
 ];

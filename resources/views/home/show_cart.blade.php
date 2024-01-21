@@ -69,7 +69,7 @@
                                                     </div>
                                                 </div>
                                                 <a onclick="return confirm("Are you sure?")" href="{{ url('delete_cart', $cart->id) }}"
-                                                    class="btn btn-danger">Remove</a>
+                                                    class=" ml-3 text-red-400 ">Remove</a>
                                             </div>
                                         </li>
                                         <?php $totalprice = $totalprice + $cart->price; ?>
@@ -114,7 +114,8 @@
     @include('home.footer')
     </div>
 
-    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <script src="./node_modules/preline/dist/preline.js"></script>
 
 </body>
 

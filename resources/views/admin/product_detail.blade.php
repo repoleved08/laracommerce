@@ -191,7 +191,7 @@
 
             </div>
             <!-- ./ layout-wrapper -->
-
+            <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
             <!-- JQuery -->
             <script src="admin/libs/jquery-3.7.1.min.js"></script>
 

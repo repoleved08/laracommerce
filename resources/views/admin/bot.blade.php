@@ -84,65 +84,26 @@
                                             <img width="60" src="admin/logo.svg" alt="logo">
                                         </div>
                                         <div class="my-5 text-center text-lg-start">
-                                            <h1 class="display-8">Add Products</h1>
+                                            <h1 class="display-8">Add Bots</h1>
 
                                         </div>
-                                        <form action="{{ url('/add_product') }}" method="POST"
+                                        <form action="{{ url('/add_bot') }}" method="POST"
                                             enctype="multipart/form-data" class="row g-3">
                                             @csrf
-                                            <div class="col-md-12">
+                                            <div class="col-md-6">
                                                 <label for="name" class="form-label">Product Name</label>
                                                 <input type="text" class="form-control" id="inputName"
                                                     name="name">
                                             </div>
-                                            <div class="col-md-12">
-                                                <label for="description" class="form-label">Product Description</label>
-                                                <textarea type="text" class="form-control" id="mytextarea"
-                                                    name="description"></textarea>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="inputState" class="form-label">Bot</label>
-                                                <select id="inputState" name="bot" class="form-select">
-                                                    <option selected>Choose Bot</option>
-                                                    @foreach ($bot as $bot)
-                                                        <option value="{{ $bot->file }}"> {{ $bot->file }} </option>
-                                                    @endforeach
-
-                                                </select>
-                                            </div>
-                                            <div class="col-6">
-                                                <label for="price" class="form-label">Price</label>
-                                                <input type="number" class="form-control" name="price"
-                                                    id="inputPrice" placeholder="Price">
-                                            </div>
-                                            <div class="col-6">
-                                                <label for="price_discount" class="form-label">Price Discounted</label>
-                                                <input type="number" class="form-control" name="discount_price"
-                                                    id="inputDiscount" placeholder="Discount">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="quantity" class="form-label">Quantity</label>
-                                                <input type="number" class="form-control" id="inputQuantity"
-                                                    name="quantity">
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label for="inputState" class="form-label">Category</label>
-                                                <select id="inputState" name="category" class="form-select">
-                                                    <option selected>Choose category</option>
-                                                    @foreach ($category as $category)
-                                                        <option value="{{ $category->cat_name }}"> {{ $category->cat_name }} </option>
-                                                    @endforeach
-
-                                                </select>
-                                            </div>
+                                            
                                             <div class="col-md-2">
-                                                <label for="inputImage" class="form-label">Product Image</label>
-                                                <input type="file" class="form-control " name="image"
-                                                    id="inputImage" placeholder="Upload Image">
+                                                <label for="inputImage" class="form-label">Bot File</label>
+                                                <input type="file" class="form-control " name="file"
+                                                    id="inputImage" placeholder="Upload Bot">
                                             </div>
 
                                             <div class="text-center text-lg-start mb-5">
-                                                <input type="submit" class="btn btn-primary" value="Add Product">
+                                                <input type="submit" class="btn btn-primary" value="Add Bot">
                                             </div>
                                         </form>
                                     </div>

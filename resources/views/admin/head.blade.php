@@ -20,6 +20,16 @@
     <!-- Slick -->
     <link rel="stylesheet" href="admin/libs/slick/slick.css" type="text/css">
 
+    <script src="https://cdn.tiny.cloud/1/6lt906gmussvvct9nqqxaou5p5a5c7hyvj9ed05rtoksv33u/tinymce/6/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            height: 200,
+            plugins: [ 'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview' ],
+            selector: '#mytextarea'
+        });
+    </script>
+
     <base href="/public">
 
     <!-- Main style file -->

@@ -8,11 +8,13 @@
         </div>
         <!-- Button -->
         <div class="hidden md:flex space-x-2">
-            <a href="#" class="p-3 pt-2 text-white font-bold hover:text-darkGrayishBlue">Telegram</a>
-            <a href="#" class="p-3 pt-2 text-white font-bold hover:text-darkGrayishBlue">Support</a>
+            <a href="#" class="p-3 pt-2 text-white font-bold hover:text-darkGrayishBlue">Strategies</a>
+            <a href="{{url('blogpost')}}" class="p-3 pt-2 text-white font-bold hover:text-darkGrayishBlue">Blogs</a>
+            <a href="{{url('userorders')}}" class="p-3 pt-2 text-white font-bold hover:text-darkGrayishBlue">Orders</a>
             <a href="{{url('show_cart')}}" class="p-3 pt-2 text-white font-bold hover:text-darkGrayishBlue">Cart</a>
             <div class="group relative inline-block pt-2">
-                <a href="#" class="pt-2 text-white font-bold hover:text-darkGrayishBlue">Menu
+                <a href="#" class="pt-2 text-white font-bold hover:text-darkGrayishBlue">
+                    Menu
                     <span
                         class="absolute right-0 top-full w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 group-hover:block hidden">
                         <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">

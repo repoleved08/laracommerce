@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed84c6138106744c16fcd2a7b8f96e0f",
+    "content-hash": "4d17f478cf81fb01b80d936fd6aa688f",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -183,6 +183,50 @@
                 }
             ],
             "time": "2023-12-11T17:09:12+00:00"
+        },
+        {
+            "name": "coinremitter/laravel",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CoinRemitter/coinremitter-laravel.git",
+                "reference": "ebad82a8548de872c307e340b43647964b7dd13a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CoinRemitter/coinremitter-laravel/zipball/ebad82a8548de872c307e340b43647964b7dd13a",
+                "reference": "ebad82a8548de872c307e340b43647964b7dd13a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Coinremitter\\CoinremiterServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Coinremitter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Official laravel plugin for coinremitter cryptocurrency payment gateway",
+            "support": {
+                "issues": "https://github.com/CoinRemitter/coinremitter-laravel/issues",
+                "source": "https://github.com/CoinRemitter/coinremitter-laravel/tree/0.2.0"
+            },
+            "time": "2023-01-31T13:35:23+00:00"
         },
         {
             "name": "dasprid/enum",
@@ -2963,6 +3007,74 @@
             "time": "2022-06-13T21:57:56+00:00"
         },
         {
+            "name": "prevailexcel/laravel-coinremitter",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PrevailExcel/laravel-coinremitter.git",
+                "reference": "12e36e6b3c8061dd52da96360db611704639baae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PrevailExcel/laravel-coinremitter/zipball/12e36e6b3c8061dd52da96360db611704639baae",
+                "reference": "12e36e6b3c8061dd52da96360db611704639baae",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.0.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "PrevailExcel\\Coinremitter\\CoinremitterServiceProvider"
+                    ],
+                    "aliases": {
+                        "Coinremitter": "PrevailExcel\\Coinremitter\\Facades\\Coinremitter"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "utils/helpers/coinremitter.php"
+                ],
+                "psr-4": {
+                    "PrevailExcel\\Coinremitter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PrevailExcel",
+                    "email": "prevailexcellent@gmail.com"
+                }
+            ],
+            "description": "A Laravel Package for Coinremitter",
+            "keywords": [
+                "coinremitter",
+                "crypto",
+                "crypto payments",
+                "github",
+                "laravel",
+                "laravel 6",
+                "laravel 7",
+                "laravel 8",
+                "laravel 9",
+                "open source",
+                "payments",
+                "php",
+                "subscription"
+            ],
+            "support": {
+                "issues": "https://github.com/PrevailExcel/laravel-coinremitter/issues",
+                "source": "https://github.com/PrevailExcel/laravel-coinremitter/tree/1.0.0"
+            },
+            "time": "2022-12-09T14:03:11+00:00"
+        },
+        {
             "name": "psr/clock",
             "version": "1.0.0",
             "source": {
@@ -3677,6 +3789,65 @@
                 }
             ],
             "time": "2023-11-08T05:53:05+00:00"
+        },
+        {
+            "name": "stripe/stripe-php",
+            "version": "v13.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "3d9250964c9d0bc9de8c706b16a90a82d9c8ed9d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/3d9250964c9d0bc9de8c706b16a90a82d9c8ed9d",
+                "reference": "3d9250964c9d0bc9de8c706b16a90a82d9c8ed9d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "3.5.0",
+                "phpstan/phpstan": "^1.2",
+                "phpunit/phpunit": "^5.7 || ^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "support": {
+                "issues": "https://github.com/stripe/stripe-php/issues",
+                "source": "https://github.com/stripe/stripe-php/tree/v13.9.0"
+            },
+            "time": "2024-01-12T18:12:31+00:00"
         },
         {
             "name": "symfony/console",
