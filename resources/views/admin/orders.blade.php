@@ -73,13 +73,16 @@
                             <div class="d-md-flex gap-4 align-items-center">
                                 <div class="d-none d-md-flex">All Orders</div>
                                 <div class=" align-items-center">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Search Term" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                          <button class="btn btn-outline-secondary" type="button">Button</button>
+                                    <form action="{{ url('search') }}" method="get">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Search Term"
+                                                aria-label="Recipient's username" name="keyword" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary" type="submit">Button</button>
+                                            </div>
                                         </div>
-                                      </div>
-                                    
+                                    </form>
+
                                 </div>
 
                             </div>
@@ -104,7 +107,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($order as $order)
+                                @forelse ($order as $order)
                                     <tr>
 
                                         <td>
@@ -127,20 +130,27 @@
                                             </a></td>
                                         <td>{{ $order->payment_status }}</td>
                                         <td>
-                                                <a class="btn btn-secondary btn-sm">{{ $order->delivery_status }}</a>
+                                            <a class="btn btn-secondary btn-sm">{{ $order->delivery_status }}</a>
                                         </td>
                                         <td>
                                             @if ($order->delivery_status == 'Processing')
-                                            <a href="{{ url('delivered', $order->id) }}"
-                                                class="btn btn-success">Process</a>
+                                                <a href="{{ url('delivered', $order->id) }}"
+                                                    class="btn btn-success">Process</a>
                                             @else
-                                            <button class="btn btn-outline-info btn-sm" type="button" id="button-addon1">
-                                                <i class="bi bi-check"></i> Done
-                                            </button>
+                                                <button class="btn btn-outline-info btn-sm" type="button"
+                                                    id="button-addon1">
+                                                    <i class="bi bi-check"></i> Done
+                                                </button>
                                             @endif
                                         </td>
                                     </tr>
-                                @endforeach
+                                    @empty
+                                    <tr>
+                                        <td>
+                                            No Data Found
+                                        </td>
+                                    </tr>
+                                @endforelse
                             </tbody>
                         </table>
                     </div>

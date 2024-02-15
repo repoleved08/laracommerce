@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/output.css" rel="stylesheet">
+    <link href="{{asset('css/out.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <base href="/public">
+    
     <title>X10Aibots</title>
 </head>
 
 <body
-    style="background-image: url('home/assets/bg.jpg'); background-position: center; background-repeat: no-repeat; background-attachment: scroll;background-size: cover;">
+    style="background-image: url('{{asset('home/assets/bg.jpg')}}'); background-position: center; background-repeat: no-repeat; background-attachment: scroll;background-size: cover;">
     <!-- Navbar -->
     @include('home.header')
     <div class="overflow-x-hidden">
@@ -52,7 +52,7 @@
     </div>
 
     {{-- <script src="home/script.js"></script> --}}
-    <script src="https://cdn.tailwindcss.com"></script>
+    
 
 </body>
 

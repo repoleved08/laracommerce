@@ -40,9 +40,11 @@
             @include('admin.content')
             <!-- ./ content -->
 
+           
+
             <!-- content-footer -->
             <footer class="content-footer">
-                <div><a href="https://cakeadmin.com" target="_blank">CakeAdmin</a> © 2023</div>
+                <div><a href="https://cakeadmin.com" target="_blank">GoddieAdmin</a> © 2024</div>
                 <div>
                     <nav class="nav gap-4">
                         <a href="https://themeforest.net/licenses/standard" class="nav-link">Licenses</a>

@@ -6,8 +6,8 @@ return [
     'coins' => [
 
         'BTC' => [
-            'api_key' => '$2y$10$2DM5BJawc8NimzupkbhLbOE3G3rdylPFRBo.01MNFTIXIbzBvvqmC',
-            'password' => 'Norman@123',
+            'api_key' => '$2y$10$eHVud/wMltvK55SyY.QgneQoCgnIgSbfsErCN6CQySHdASmtlIEuq',
+            'password' => '@21Portlande',
         ],
 
         'LTC' => [

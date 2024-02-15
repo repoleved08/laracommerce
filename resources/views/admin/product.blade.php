@@ -87,7 +87,7 @@
                                             <h1 class="display-8">Add Products</h1>
 
                                         </div>
-                                        <form action="{{ url('/add_product') }}" method="POST"
+                                        <form action="{{ url('add_product') }}" method="POST"
                                             enctype="multipart/form-data" class="row g-3">
                                             @csrf
                                             <div class="col-md-12">
@@ -105,7 +105,7 @@
                                                 <select id="inputState" name="bot" class="form-select">
                                                     <option selected>Choose Bot</option>
                                                     @foreach ($bot as $bot)
-                                                        <option value="{{ $bot->file }}"> {{ $bot->file }} </option>
+                                                        <option value="{{ $bot->file }}">{{ $bot->id }}.{{$bot->name}} {{ $bot->file }} </option>
                                                     @endforeach
 
                                                 </select>

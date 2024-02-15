@@ -1,3 +1,4 @@
+
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
     @foreach ($product as $products)
         <div
@@ -12,7 +13,7 @@
             @elseif($products->discount_price == null)
                 <h1 class="text-4xl text-white font-bold">${{ $products->price }}/once off</h1>
             @endif
-            <h2 class="text-white mt-3 mb-4"> {!! htmlspecialchars($products->description) !!} </h2>
+            <h2 class="text-white mt-3 mb-4"> {!! html_entity_decode($products->description) !!} </h2>
 
             <div class="mt-8 flex flex-col sm:flex-row">
                 <div>

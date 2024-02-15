@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Order;
 use App\Models\Bot;
+use App\Models\StrategyOrder;
 
 class AdminController extends Controller
 {
@@ -21,6 +22,9 @@ class AdminController extends Controller
 
     public function add_category(Request $request)
     {
+        $request->validate([
+            'cat_name' => 'required'
+        ]);
         $data = new category;
         $data->cat_name = $request->cat_name;
         $data->save();
@@ -36,9 +40,19 @@ class AdminController extends Controller
 
     public function add_product(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'price' => 'required',
+            'discount_price' => 'required',
+            'category' => 'required',
+            'bot' => 'required',
+            'quantity' => 'required',
+            'image' => 'required'
+        ]);
         $product = new Product;
         $product->name = $request->name;
-        $product->description = strip_tags($request->description);
+        $product->description = $request->description;
         $product->price = $request->price;
         $product->discount_price = $request->discount_price;
         $product->category = $request->category;
@@ -61,6 +75,10 @@ class AdminController extends Controller
 
     public function add_bot(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'file' => 'required'
+        ]);
         $data = new Bot;
         $data->name = $request->name;
         $file = $request->file;
@@ -75,7 +93,7 @@ class AdminController extends Controller
     {
         $bot = Bot::all();
         $category = Category::all();
-        return view('admin.product', compact('category','bot'));
+        return view('admin.product', compact('category', 'bot'));
     }
 
     public function show_product()
@@ -100,7 +118,7 @@ class AdminController extends Controller
         //return redirect()->back()->with('message','Product Updated Successfully');
     }
 
-    
+
     public function change_product($id, Request $request)
     {
         $product = Product::find($id);
@@ -120,7 +138,7 @@ class AdminController extends Controller
         }
 
         $product->update($request->only('name', 'description', 'price', 'discount_price', 'quantity', 'category'));
-        return redirect()->back()->with('message','Products updated successfully!');
+        return redirect()->back()->with('message', 'Products updated successfully!');
     }
 
     public function orders()
@@ -133,9 +151,31 @@ class AdminController extends Controller
     {
         $order = Order::find($id);
         $order->delivery_status = "Processed";
-        $order->save(); 
-        return redirect()->back()->with("message","Approved");
+        $order->save();
+        return redirect()->back()->with("message", "Approved");
     }
 
-   
+    //strategy orders
+    public function adminstrategyorders()
+    {
+        $order = StrategyOrder::all();
+        return view('admin.strategyorders', compact('order'));
+    }
+    public function delivery_status($id)
+    {
+        $order = StrategyOrder::find($id);
+        $order->delivery_status = "Processed";
+        $order->save();
+        return redirect()->back()->with("message", "Approved");
+    }
+
+
+    public function search(Request $request)
+    {
+        $search = $request->keyword;
+        $order = Order::where("name", "LIKE", "%" . $search . "%")->orWhere("price", "LIKE", "%" . $search . "%")->get();
+        return view("admin.orders", compact("order"));
+    }
+
+
 }

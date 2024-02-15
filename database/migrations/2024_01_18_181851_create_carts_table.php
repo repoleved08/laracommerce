@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('product_id') ->nullable(true);
             $table->string('user_id') ->nullable(true);
             $table->string('image') ->nullable(true);
+            $table->string('bot')->nullable();
+            $table->string('category')->nullable();
             $table->timestamps();
         });
     }

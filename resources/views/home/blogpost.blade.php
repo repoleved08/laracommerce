@@ -4,126 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/output.css" rel="stylesheet">
+    <link href="{{asset('css/out.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <base href="/public">
+
     <title>X10Aibots</title>
 </head>
 
 <body
-    style="background-image: url('home/assets/bg.jpg'); background-position: center; background-repeat: no-repeat; background-attachment: scroll;background-size: cover;">
+    style="background-image: url('{{('home/assets/bg.jpg')}}'); background-position: center; background-repeat: no-repeat; background-attachment: scroll;background-size: cover;">
     <!-- Navbar -->
     @include('home.header')
     <div class="overflow-x-hidden">
         <!-- Text goes here -->
 
 
-        <section class="w-screen pt-40 mb-14 ">
-
-            <div class="bg-white py-24 sm:py-32">
-                <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div class="mx-auto max-w-2xl sm:text-center">
-                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple no-tricks pricing
-                        </h2>
-                        <p class="mt-6 text-lg leading-8 text-gray-600">Distinctio et nulla eum soluta et neque labore
-                            quibusdam. Saepe et quasi iusto modi velit ut non voluptas in. Explicabo id ut laborum.</p>
-                    </div>
-                    <div
-                        class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
-                        <div class="p-8 sm:p-10 lg:flex-auto">
-                            <h3 class="text-2xl font-bold tracking-tight text-gray-900">Lifetime membership</h3>
-                            <p class="mt-6 text-base leading-7 text-gray-600">Lorem ipsum dolor sit amet consect etur
-                                adipisicing elit. Itaque amet indis perferendis blanditiis repellendus etur quidem
-                                assumenda.</p>
-                            <div class="mt-10 flex items-center gap-x-4">
-                                <h4 class="flex-none text-sm font-semibold leading-6 text-indigo-600">What’s included
-                                </h4>
-                                <div class="h-px flex-auto bg-gray-100"></div>
-                            </div>
-                            <ul role="list"
-                                class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
-                                <li class="flex gap-x-3">
-                                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
-                                        fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    Private forum access
-                                </li>
-                                <li class="flex gap-x-3">
-                                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
-                                        fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    Member resources
-                                </li>
-                                <li class="flex gap-x-3">
-                                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
-                                        fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    Entry to annual conference
-                                </li>
-                                <li class="flex gap-x-3">
-                                    <svg class="h-6 w-5 flex-none text-indigo-600" viewBox="0 0 20 20"
-                                        fill="currentColor" aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    Official member t-shirt
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                            <div
-                                class="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-                                <div class="mx-auto max-w-xs px-8">
-                                    <p class="text-base font-semibold text-gray-600">Pay once, own it forever</p>
-                                    <p class="mt-6 flex items-baseline justify-center gap-x-2">
-                                        <span class="text-5xl font-bold tracking-tight text-gray-900">$349</span>
-                                        <span
-                                            class="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
-                                    </p>
-                                    <a href="#"
-                                        class="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
-                                        access</a>
-                                    <p class="mt-6 text-xs leading-5 text-gray-600">Invoices and receipts available for
-                                        easy company reimbursement</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                        <div
-                            class="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-                            <div class="mx-auto max-w-xs px-8">
-                                <p class="text-base font-semibold text-gray-600">Pay once, own it forever</p>
-                                <p class="mt-6 flex items-baseline justify-center gap-x-2">
-                                    <span class="text-5xl font-bold tracking-tight text-gray-900">$349</span>
-                                    <span
-                                        class="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD</span>
-                                </p>
-                                <a href="#"
-                                    class="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
-                                    access</a>
-                                <p class="mt-6 text-xs leading-5 text-gray-600">Invoices and receipts available for
-                                    easy company reimbursement</p>
-                            </div>
+        <!-- ====== Blog Section Start -->
+        <section class="pt-20 pb-10 lg:pt-[120px] lg:pb-20 bg-white dark:bg-dark">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap justify-center -mx-4">
+                    <div class="w-full px-4">
+                        <div class="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
+                            <span class="block mb-2 text-lg font-semibold text-primary">
+                                Our Blogs
+                            </span>
+                            <h2 class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px] dark:text-white">
+                                Our Recent News
+                            </h2>
+                            <p class="text-base text-body-color dark:text-dark-6">
+                                There are many variations of passages of Lorem Ipsum available
+                                but the majority have suffered alteration in some form.
+                            </p>
                         </div>
                     </div>
                 </div>
-                
+                <div class="flex flex-wrap -mx-4">
+                    
+                    @foreach ($post as $post)
+                        
+                    
+
+                    <div class="w-full px-4 md:w-1/2 lg:w-1/3">
+                        <div class="w-full mb-10">
+                            <div class="mb-8 overflow-hidden rounded">
+                                <img src="products/{{$post->image}}"
+                                    alt="image" class="w-full" />
+                            </div>
+                            <div>
+                                <span
+                                    class="inline-block px-4 py-1 mb-5 text-xs font-semibold leading-loose text-center text-blue-900  rounded bg-primary">
+                                    {{$post->created_at}}
+                                </span>
+                                <h3>
+                                    <a href="{{url('detailed_page',$post->id)}}"
+                                        class="inline-block mb-4 text-xl font-semibold text-dark  hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl">
+                                        {{$post->title}}
+                                    </a>
+                                </h3>
+                                <p class="text-base text-body-color dark:text-dark-6">
+                                 {!! html_entity_decode($post->short_description) !!}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    @endforeach
+                    
+                </div>
             </div>
-
-
-
         </section>
+        <!-- ====== Blog Section End -->
+
+
+        <!-- ====== Cards Section Start -->
+        <section class="bg-gray-2 pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+            <div class="container mx-auto">
+                <div class="-mx-4 flex flex-wrap">
+                    {{-- @foreach ($post as $post)
+                        <div class="w-full px-4 md:w-1/2 xl:w-1/3">
+                            <div
+                                class="mb-10 overflow-hidden rounded-lg bg-white shadow-1 duration-300 hover:shadow-3 dark:bg-dark-2 dark:shadow-card dark:hover:shadow-3">
+                                <img src="products/{{$post->image}}" alt="image" class="w-full" />
+                                <div class="p-8 text-center sm:p-9 md:p-7 xl:p-9">
+                                    <h3>
+                                        <a href="javascript:void(0)"
+                                            class="mb-4 block text-xl font-semibold text-dark hover:text-primary text-blue sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]">
+                                            {{$post->title}}
+                                        </a>
+                                    </h3>
+                                    <p class="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
+                                        {!! html_entity_decode($post->short_description) !!}
+                                    </p>
+
+                                    <a href="javascript:void(0)"
+                                        class="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-dark-6">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                     --}}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== Cards Section End -->
+
+
+
+
+
 
         <!-- Services -->
 
@@ -133,7 +123,8 @@
     </div>
 
     {{-- <script src="home/script.js"></script> --}}
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="/home/assets/script.js"></script>
 
 </body>
 

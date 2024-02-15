@@ -10,7 +10,7 @@
     </div>
     <div class="menu-body">
         <div class="dropdown">
-            <a href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
+            <a href="{{url('/redirect')}}" class="d-flex align-items-center" data-bs-toggle="dropdown">
                 <div class="avatar me-3">
                     <img src="" class="rounded-circle" alt="image">
                 </div>
@@ -23,7 +23,7 @@
         <ul>
             <li class="menu-divider">Dashboard</li>
             <li>
-                <a class="active" href="./dashboard.html">
+                <a class="active" href="{{url('/redirect')}}">
                     <span class="nav-link-icon">
                         <i class="bi bi-bar-chart"></i>
                     </span>
@@ -40,6 +40,9 @@
                 <ul>
                     <li>
                         <a href="{{ url('orders') }}">List</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('adminstrategyorders') }}">Strategies</a>
                     </li>
                     {{-- <li>
                         <a href="admin/order-detail.html">Detail</a>
@@ -71,24 +74,48 @@
                 </ul>
             </li>
             <li>
-                <a href="#">
+                <a href="{{url('add_post')}}">
                     <span class="nav-link-icon">
                         <i class="bi bi-wallet2"></i>
                     </span>
-                    <span>Buyer</span>
+                    <span>Posts</span>
                 </a>
                 <ul>
+                    <li>
+                        <span class="nav-link-icon">
+                            <i class="bi bi-wallet2"></i>
+                        </span>
+                        <a href="{{ url('add_post') }}">Add Post</a>
+                    </li>
+                    <li>
+                        <span class="nav-link-icon">
+                            <i class="bi bi-wallet2"></i>
+                        </span>
+                        <a href="{{ url('view_post') }}">View Post</a>
+                    </li>
+                </ul>
+            </li>
 
+            <li>
+                <a href="{{url('add_post')}}">
+                    <span class="nav-link-icon">
+                        <i class="bi bi-wallet2"></i>
+                    </span>
+                    <span>Strategy</span>
+                </a>
+                <ul>
+                    <li>
+                        <span class="nav-link-icon">
+                            <i class="bi bi-wallet2"></i>
+                        </span>
+                        <a href="{{ url('add_strategy') }}">Add Strategy</a>
+                    </li>
                 </ul>
             </li>
 
             <li>
 
 
-            </li>
-            <li class="menu-divider">Apps</li>
-
-            <li>
 
                 </a>
                 <ul>

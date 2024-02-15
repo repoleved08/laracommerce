@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{-- <link href="/home/output.css" rel="stylesheet"> --}}
-    <base href="/public">
-    <link rel="stylesheet" href="css/output.css">
+ 
+    <link rel="stylesheet" href="{{asset('css/out.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <title>X10Aibots</title>
 </head>
 
 <body
-    style="background-image: url('home/assets/bg.jpg'); background-position: center; background-repeat: no-repeat; background-attachment: scroll;background-size: cover;">
+    style="background-image: url('{{asset('home/assets/bg.jpg')}}'); background-position: center; background-repeat: no-repeat; background-attachment: scroll;background-size: cover;">
     <!-- Navbar -->
     @include('home.header')
     <div class="overflow-x-hidden">
@@ -114,7 +114,6 @@
     @include('home.footer')
     </div>
 
-    <script src="https://cdn.tailwindcss.com"></script> 
     <script src="./node_modules/preline/dist/preline.js"></script>
 
 </body>

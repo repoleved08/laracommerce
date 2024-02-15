@@ -3,7 +3,7 @@
         <h1 class="text-2xl font-bold text-white ml-14">
             <span>The Modern way of trading</span>
             <span class="inline-block ml-3 pt-1">
-                <img src="home/assets/icons/check.png" alt="">
+                <img src="{{asset('home/assets/icons/check.png')}}" class="pointer-events-none" alt="">
             </span>
         </h1>
         <p class="text-gray-400 text-start ml-14">X10Aibots is a trading robot that specializes in trading indices,
@@ -13,7 +13,7 @@
             access and use.</p>
     </div>
     <div class="basis-1/2 order-1 sm:order-2">
-        <img src="home/assets/mockups/laptop.png" width="450px" alt="Laptop">
+        <img src="{{asset('home/assets/mockups/tester.png')}}" width="450px" class="pointer-events-none" alt="Laptop">
     </div>
 </div>
 <!-- box 2 -->
@@ -22,7 +22,7 @@
         <h1 class="text-2xl font-bold text-white text-start ml-14">
             <span>Beginner friendly</span>
             <span class="inline-block ml-3 pt-1">
-                <img src="home/assets/icons/check.png" alt="">
+                <img src="{{asset('home/assets/icons/check.png')}}" class="pointer-events-none" alt="">
             </span>
         </h1>
         <p class="text-gray-400 text-start ml-14">X10Aibots is designed to cater to both professional traders and
@@ -30,7 +30,7 @@
             package. With X10Aibots, you’re not just trading; you’re enhancing your skills too. </p>
     </div>
     <div class="basis-1/2 order-1 sm:order-2">
-        <img src="home/assets/mockups/laptop-2.png" width="450px" alt="Laptop">
+        <img src="{{asset('home/assets/mockups/bitco5.png')}}" width="450px" class="pointer-events-none" alt="Laptop">
     </div>
 </div>
 <!-- box-3 -->
@@ -39,7 +39,7 @@
         <h1 class="text-3xl font-bold text-white text-start ml-14">
             <span>Whats new</span>
             <span class="inline-block ml-3 pt-1">
-                <img src="home/assets/icons/check.png" alt="">
+                <img src="{{asset('home/assets/icons/check.png')}}" class="pointer-events-none" alt="">
             </span>
         </h1>
         <p class="text-gray-400 text-start ml-14">X10Aibots’ innovative design facilitates two trading modes: Normal and
@@ -50,7 +50,7 @@
             profitability on each trade.</p>
     </div>
     <div class="basis-1/2 order-1 sm:order-2">
-        <img src="home/assets/mockups/phones-1.png" width="450px" alt="Laptop">
+        <img src="{{asset('home/assets/mockups/phones-1.png')}}" class="pointer-events-none" width="450px" alt="Laptop">
     </div>
 </div>
 </div>
